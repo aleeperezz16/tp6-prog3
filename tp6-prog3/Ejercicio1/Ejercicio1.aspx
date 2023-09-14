@@ -6,10 +6,18 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            height: 232px;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="auto-style1">
+            <asp:Label ID="lblProductos" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Productos"></asp:Label>
+            <asp:GridView ID="gdvProductos" runat="server">
+            </asp:GridView>
         </div>
     </form>
 </body>
