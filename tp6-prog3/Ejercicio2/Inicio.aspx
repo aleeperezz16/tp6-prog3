@@ -61,12 +61,16 @@
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:LinkButton ID="lbEliminarPD" runat="server">Eliminar Productos seleccionados</asp:LinkButton>
+                    </td>
                 </tr>
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
-                    <td>&nbsp;</td>
+                    <td>
+                        <asp:HyperLink ID="hl" runat="server" NavigateUrl="~/Ejercicio2/MostrarProductos.aspx.cs">Mostrar Productos</asp:HyperLink>
+                    </td>
                 </tr>
             </table>
         </div>
