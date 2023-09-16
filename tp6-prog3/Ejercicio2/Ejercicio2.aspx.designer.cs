@@ -11,7 +11,7 @@ namespace tp6_prog3.Ejercicio2
 {
 
 
-    public partial class MostrarProductos
+    public partial class Inicio
     {
 
         /// <summary>
@@ -24,12 +24,30 @@ namespace tp6_prog3.Ejercicio2
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// grvProductos control.
+        /// hlSeleccionarProductos control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grvProductos;
+        protected global::System.Web.UI.WebControls.HyperLink hlSeleccionarProductos;
+
+        /// <summary>
+        /// lbEliminarPD control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton lbEliminarPD;
+
+        /// <summary>
+        /// hl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hl;
     }
 }
