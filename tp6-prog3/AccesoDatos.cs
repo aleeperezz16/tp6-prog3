@@ -5,7 +5,7 @@ using System.Web;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace tp5_prog3
+namespace tp6_prog3
 {
     public class AccesoDatos
     {
