@@ -10,7 +10,7 @@ namespace tp6_prog3
         AccesoDatos conexion = new AccesoDatos("BDNeptuno");
         public DataTable ObtenerProductos()
         {
-            string consultaSQL = "SELECT IdProducto AS Id Producto, NombreProducto AS Nombre Producto, IdProveedor AS Id Porveedor, CantidadPorUnidad AS Cantidad Por Unidad, PrecioUnidad AS Precio Unitario FROM Productos";
+            string consultaSQL = "SELECT IdProducto AS Id Producto, NombreProducto AS Nombre Producto, IdProveedor AS Id Proveedor, CantidadPorUnidad AS Cantidad Por Unidad, PrecioUnidad AS Precio Unitario FROM Productos";
             string nombreTabla = "Productos";
             return conexion.ObtenerTablas(consultaSQL, nombreTabla);
         }
