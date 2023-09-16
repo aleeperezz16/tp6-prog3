@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.33927.289
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tp6_prog3", "tp6-prog3\tp6_prog3.csproj", "{073CAB16-40A8-45AC-9998-6CA91ABEFB58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tp6-prog3", "tp6-prog3\tp6-prog3.csproj", "{073CAB16-40A8-45AC-9998-6CA91ABEFB58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

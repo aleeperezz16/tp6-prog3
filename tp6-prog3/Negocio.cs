@@ -8,7 +8,7 @@ namespace tp6_prog3
 {
     public class Negocio
     {
-        AccesoDatos conexion = new AccesoDatos("BDNeptuno");
+        AccesoDatos conexion = new AccesoDatos("Neptuno");
         public DataTable ObtenerProductos()
         {
             string consultaSQL = "SELECT IdProducto AS Id Producto, NombreProducto AS Nombre Producto, IdProveedor AS Id Proveedor, CantidadPorUnidad AS Cantidad Por Unidad, PrecioUnidad AS Precio Unitario FROM Productos";
