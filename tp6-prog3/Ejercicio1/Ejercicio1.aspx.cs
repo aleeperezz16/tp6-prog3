@@ -12,8 +12,7 @@ namespace tp6_prog3.Ejercicio1
         Negocio negocio = new Negocio();
         protected void Page_Load(object sender, EventArgs e)
         {
-            gdvProductos.DataSource = negocio.ObtenerProductos();
-            gdvProductos.DataBind();
+            cargarProductosEnGrilla();
         }
 
         protected void gdvProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -39,6 +38,26 @@ namespace tp6_prog3.Ejercicio1
             }
 
             ///FALTA VOLVER A CARGAR LA GRILLA.
+            cargarProductosEnGrilla();
+
+        }
+
+        protected void gdvProductos_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            gdvProductos.EditIndex = e.NewEditIndex;
+            cargarProductosEnGrilla();
+        }
+
+        protected void gdvProductos_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
+        {
+            gdvProductos.EditIndex = -1;
+            cargarProductosEnGrilla();
+        }
+
+        private void cargarProductosEnGrilla()
+        {
+            gdvProductos.DataSource = negocio.ObtenerProductos();
+            gdvProductos.DataBind();
 
         }
     }
