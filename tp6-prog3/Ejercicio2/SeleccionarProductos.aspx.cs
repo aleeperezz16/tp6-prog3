@@ -9,9 +9,11 @@ namespace tp6_prog3.Ejercicio2
 {
     public partial class SeleccionarProductos : System.Web.UI.Page
     {
+        private AccesoDatos _conexion = new AccesoDatos("Neptuno");
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            grdProductos.DataSource = _conexion.ObtenerTablas("SELECT IdProducto,NombreProducto,IdProveedor,PrecioUnidad FROM Productos", "Productos");
+            grdProductos.DataBind();
         }
     }
 }

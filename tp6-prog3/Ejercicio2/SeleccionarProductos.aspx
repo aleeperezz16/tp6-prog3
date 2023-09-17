@@ -10,12 +10,28 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="grdProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+            <asp:GridView ID="grdProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" AutoGenerateSelectButton="True">
                 <Columns>
-                    <asp:TemplateField HeaderText="Id Producto"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="Nombre Producto"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="Id Proveedor"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="Precio Unitario"></asp:TemplateField>
+                    <asp:TemplateField HeaderText="Id Producto">
+                        <ItemTemplate>
+                            <asp:Label ID="itLblIdProducto" runat="server" Text='<%# Bind("IdProducto") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Nombre Producto">
+                        <ItemTemplate>
+                            <asp:Label ID="itLblNombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Id Proveedor">
+                        <ItemTemplate>
+                            <asp:Label ID="itLblIdProveedor" runat="server" Text='<%# Bind("IdProveedor") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
+                    <asp:TemplateField HeaderText="Precio Unitario">
+                        <ItemTemplate>
+                            <asp:Label ID="itLblPrecioUnitario" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:Label>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </Columns>
                 <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
                 <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
