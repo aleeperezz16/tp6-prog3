@@ -20,7 +20,7 @@ namespace tp6_prog3
 
         public int EliminarProducto(string idProducto)
         {
-            string consultaSQL = ""; // CONSTRUIR LA CONSULTA SQL PARA ELIMINAR UN PRODUCTO
+            string consultaSQL = "DELETE FROM Productos Where IdProducto ="+idProducto.Trim(); // CONSTRUIR LA CONSULTA SQL PARA ELIMINAR UN PRODUCTO
             return _conexion.EjecutarConsulta(consultaSQL);
         }
 

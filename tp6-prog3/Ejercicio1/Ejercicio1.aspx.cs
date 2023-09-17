@@ -21,5 +21,25 @@ namespace tp6_prog3.Ejercicio1
             gdvProductos.PageIndex = e.NewPageIndex;
             gdvProductos.DataBind();
         }
+
+        protected void gdvProductos_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        { 
+            
+            string s_IdProducto = ((Label)gdvProductos.Rows[e.RowIndex].FindControl("lbl_it_idProducto")).Text;
+
+            int Borro = negocio.EliminarProducto(s_IdProducto);
+
+            if (Borro == 1)
+            {
+              ///SE ELIMINO CORRECTAMENTE
+
+            }
+            {
+                ///NO SE ELIMINO
+            }
+
+            ///FALTA VOLVER A CARGAR LA GRILLA.
+
+        }
     }
 }

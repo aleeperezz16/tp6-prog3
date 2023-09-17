@@ -13,8 +13,8 @@ namespace tp6_prog3
 
         public AccesoDatos(string baseDeDatos)
         {  ///RUTA DAVID
-           ///ruta = "Data Source = DESKTOP - CIET1TI\\SQLEXPRESS01; Initial Catalog ="+ baseDeDatos +"; Integrated Security = True";
-            string ruta = "Data Source = localhost\\sqlexpress; Initial Catalog = " + baseDeDatos + "; Integrated Security = True";
+           ///string ruta = "Data Source = DESKTOP - CIET1TI\\SQLEXPRESS01; Initial Catalog ="+ baseDeDatos +"; Integrated Security = True";
+           string ruta = "Data Source = localhost\\sqlexpress; Initial Catalog = " + baseDeDatos + "; Integrated Security = True";
             _conexion = new SqlConnection(ruta);
         }
 
