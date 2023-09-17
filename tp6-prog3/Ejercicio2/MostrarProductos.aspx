@@ -6,11 +6,17 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+            <b>Productos Seleccionados por el Usuario:</b><br />
+            <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="131px">
                 <Columns>
                     <asp:TemplateField HeaderText="Id Producto"></asp:TemplateField>
                     <asp:TemplateField HeaderText="Nombre Producto"></asp:TemplateField>
@@ -27,7 +33,17 @@
                 <SortedDescendingCellStyle BackColor="#D6DFDF" />
                 <SortedDescendingHeaderStyle BackColor="#002876" />
             </asp:GridView>
+            <br />
+            <br />
+            <br />
+            <asp:HyperLink ID="hlVolverlInicio" runat="server" NavigateUrl="~/Ejercicio2/Ejercicio2.aspx">Volver al Inicio</asp:HyperLink>
         </div>
     </form>
+    <table class="auto-style1">
+        <tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table>
 </body>
 </html>

@@ -29,5 +29,6 @@ namespace tp6_prog3.Ejercicio2
 
             lblSeleccionado.Text = "Producto agregado " + nombreprod ; 
         }
+
     }
 }

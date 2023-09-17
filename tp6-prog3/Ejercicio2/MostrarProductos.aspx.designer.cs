@@ -31,5 +31,14 @@ namespace tp6_prog3.Ejercicio2
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.GridView grvProductos;
+
+        /// <summary>
+        /// hlVolverlInicio control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink hlVolverlInicio;
     }
 }
