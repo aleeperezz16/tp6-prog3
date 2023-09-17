@@ -9,48 +9,36 @@ namespace tp6_prog3
 {
     public class AccesoDatos
     {
-        private string ruta;
-        private SqlConnection conexion;
+        private SqlConnection _conexion;
 
         public AccesoDatos(string baseDeDatos)
         {  ///RUTA DAVID
            ///ruta = "Data Source = DESKTOP - CIET1TI\\SQLEXPRESS01; Initial Catalog ="+ baseDeDatos +"; Integrated Security = True";
-            ruta = "Data Source = localhost\\sqlexpress; Initial Catalog = " + baseDeDatos + "; Integrated Security = True";
-            conexion = new SqlConnection(ruta);
+            string ruta = "Data Source = localhost\\sqlexpress; Initial Catalog = " + baseDeDatos + "; Integrated Security = True";
+            _conexion = new SqlConnection(ruta);
         }
 
         public DataTable ObtenerTablas(string consultaSQL, string nombreTabla)
         {
-            AbrirConexion();
+            _conexion.Open();
 
-            SqlDataAdapter adapter = new SqlDataAdapter(consultaSQL, conexion);
+            SqlDataAdapter adapter = new SqlDataAdapter(consultaSQL, _conexion);
             DataSet ds = new DataSet();
             adapter.Fill(ds, nombreTabla);
 
-            CerrarConexion();
+            _conexion.Close();
             return ds.Tables[nombreTabla];
         }
 
         public int EjecutarConsulta(string consulta)
         {
-            AbrirConexion();
+            _conexion.Open();
 
-            SqlCommand comando = new SqlCommand(consulta, conexion);
+            SqlCommand comando = new SqlCommand(consulta, _conexion);
             int filasAfectadas = comando.ExecuteNonQuery();
 
-            CerrarConexion();
+            _conexion.Close();
             return filasAfectadas;
         }
-
-        private void AbrirConexion()
-        {
-            conexion.Open();
-        }
-
-        private void CerrarConexion()
-        {
-            conexion.Close();
-        }
-
     }
 }

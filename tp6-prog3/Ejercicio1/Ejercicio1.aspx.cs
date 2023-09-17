@@ -15,5 +15,11 @@ namespace tp6_prog3.Ejercicio1
             gdvProductos.DataSource = negocio.ObtenerProductos();
             gdvProductos.DataBind();
         }
+
+        protected void gdvProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            gdvProductos.PageIndex = e.NewPageIndex;
+            gdvProductos.DataBind();
+        }
     }
 }
