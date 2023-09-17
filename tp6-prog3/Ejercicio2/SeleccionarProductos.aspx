@@ -7,10 +7,10 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
 </head>
-<body>
+<body style="height: 569px">
     <form id="form1" runat="server">
         <div>
-            <asp:GridView ID="grdProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" AutoGenerateSelectButton="True" AllowPaging="True" OnPageIndexChanging="grdProductos_PageIndexChanging" PageSize="14">
+            <asp:GridView ID="grdProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" AutoGenerateSelectButton="True" AllowPaging="True" OnPageIndexChanging="grdProductos_PageIndexChanging" PageSize="14" OnSelectedIndexChanging="grdProductos_SelectedIndexChanging">
                 <Columns>
                     <asp:TemplateField HeaderText="Id Producto">
                         <ItemTemplate>
@@ -43,6 +43,8 @@
                 <SortedDescendingCellStyle BackColor="#D6DFDF" />
                 <SortedDescendingHeaderStyle BackColor="#002876" />
             </asp:GridView>
+            <br />
+            <asp:Label ID="lblSeleccionado" runat="server"></asp:Label>
         </div>
     </form>
 </body>

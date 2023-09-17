@@ -21,5 +21,13 @@ namespace tp6_prog3.Ejercicio2
             grdProductos.PageIndex = e.NewPageIndex;
             grdProductos.DataBind();
         }
+
+        protected void grdProductos_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
+        {
+
+            string nombreprod = ((Label)grdProductos.Rows[e.NewSelectedIndex).FindControl("itLblNombreProducto")).Text;
+
+            lblSeleccionado.Text = "Producto agregado " + nombreprod ; 
+        }
     }
 }
