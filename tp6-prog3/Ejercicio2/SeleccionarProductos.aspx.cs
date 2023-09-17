@@ -15,5 +15,11 @@ namespace tp6_prog3.Ejercicio2
             grdProductos.DataSource = _conexion.ObtenerTablas("SELECT IdProducto,NombreProducto,IdProveedor,PrecioUnidad FROM Productos", "Productos");
             grdProductos.DataBind();
         }
+
+        protected void grdProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            grdProductos.PageIndex = e.NewPageIndex;
+            grdProductos.DataBind();
+        }
     }
 }
