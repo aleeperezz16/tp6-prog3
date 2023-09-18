@@ -8,12 +8,12 @@
     <title></title>
     <style type="text/css">
         .auto-style1 {
-            height: 232px;
+            height: 462px;
             margin-left: 40px;
         }
     </style>
 </head>
-<body>
+<body style="height: 460px">
     <form id="form1" runat="server">
         <div class="auto-style1">
             <asp:Label ID="lblProductos" runat="server" Font-Bold="True" Font-Size="XX-Large" Text="Productos"></asp:Label>

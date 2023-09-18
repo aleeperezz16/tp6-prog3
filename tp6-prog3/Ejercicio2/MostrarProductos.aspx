@@ -16,13 +16,7 @@
     <form id="form1" runat="server">
         <div>
             <b>Productos Seleccionados por el Usuario:</b><br />
-            <asp:GridView ID="grvProductos" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4" Height="131px">
-                <Columns>
-                    <asp:TemplateField HeaderText="Id Producto"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="Nombre Producto"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="Id Proveedor"></asp:TemplateField>
-                    <asp:TemplateField HeaderText="Precio Unitario"></asp:TemplateField>
-                </Columns>
+            <asp:GridView ID="grvProductos" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
                 <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
                 <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
                 <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />
