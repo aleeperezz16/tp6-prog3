@@ -45,7 +45,7 @@ namespace tp6_prog3.Ejercicio1
         protected void gdvProductos_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gdvProductos.EditIndex = e.NewEditIndex;
-            cargarProductosEnGrilla();
+            gdvProductos.DataBind();
         }
 
         protected void gdvProductos_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
@@ -59,6 +59,27 @@ namespace tp6_prog3.Ejercicio1
             gdvProductos.DataSource = negocio.ObtenerProductos();
             gdvProductos.DataBind();
 
+        }
+
+        protected void gdvProductos_RowUpdating(object sender, GridViewUpdateEventArgs e)
+        {
+            string IdProducto = ((Label)gdvProductos.Rows[e.RowIndex].FindControl("lbl_eit_IdProducto")).Text;
+            string NombreProducto = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_Producto")).Text;
+            string CantidadUnidad = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_Cantidad")).Text;
+            string PrecioUnidad = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_PrecioUnidad")).Text;
+
+            int modifico = negocio.ActualizarProducto(IdProducto,NombreProducto,CantidadUnidad,PrecioUnidad);
+
+            if (modifico == 1)
+            {
+                ///SE MODIFICO CORRECTAMENTE
+
+            }
+            {
+                ///NO SE MODIFICO
+            }
+            gdvProductos.EditIndex = -1;
+            cargarProductosEnGrilla();
         }
     }
 }

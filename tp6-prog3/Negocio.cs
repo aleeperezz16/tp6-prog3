@@ -16,11 +16,9 @@ namespace tp6_prog3
             return _conexion.ObtenerTablas(consultaSQL, nombreTabla);
         }
 
-        //TODO: Falta terminar estos metodos para poder eliminar o buscar X producto
-
         public int EliminarProducto(string idProducto)
         {
-            string consultaSQL = "DELETE FROM Productos Where IdProducto ="+idProducto.Trim(); // CONSTRUIR LA CONSULTA SQL PARA ELIMINAR UN PRODUCTO
+            string consultaSQL = "DELETE FROM Productos Where IdProducto ="+idProducto.Trim(); 
             return _conexion.EjecutarConsulta(consultaSQL);
         }
 
@@ -30,7 +28,14 @@ namespace tp6_prog3
             string nombreTabla = "Productos";
             return _conexion.ObtenerTablas(consultaSQL, nombreTabla);
         }
-
-        //TODO: Hay que agregar un metodo para editar consultas
+        public int ActualizarProducto(string IdProducto, string NombreProducto, string CantidadPorUnidad, string PrecioUnidad)
+        {
+            string consultaSQL = "UPDATE Productos ";
+            consultaSQL += "SET NombreProducto = '" + NombreProducto + "',";
+            consultaSQL += "CantidadPorUnidad = '" + CantidadPorUnidad + "',";
+            consultaSQL += "PrecioUnidad = " + PrecioUnidad + " ";
+            consultaSQL += "WHERE IdProducto = " + IdProducto.Trim();
+            return _conexion.EjecutarConsulta(consultaSQL);
+        }
     }
 }
