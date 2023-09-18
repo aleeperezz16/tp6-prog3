@@ -11,6 +11,9 @@
             height: 462px;
             margin-left: 40px;
         }
+        .auto-style2 {
+            margin-left: 4px;
+        }
     </style>
 </head>
 <body style="height: 460px">
@@ -30,6 +33,7 @@
                     <asp:TemplateField HeaderText="Nombre Producto">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_Producto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:TextBox>
+                            &nbsp;&nbsp;
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_NombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:Label>
@@ -38,6 +42,7 @@
                     <asp:TemplateField HeaderText="Cantidad Por Unidad">
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_Cantidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:TextBox>
+                            &nbsp;
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_CantPorUnidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:Label>
@@ -45,7 +50,9 @@
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Precio Unidad">
                         <EditItemTemplate>
-                            <asp:TextBox ID="txt_eit_PrecioUnidad" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:TextBox ID="txt_eit_PrecioUnidad" runat="server" Text='<%# Bind("PrecioUnidad") %>' Width="270px"></asp:TextBox>
+                            &nbsp;&nbsp;&nbsp;
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_PrecioUnidad" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:Label>
