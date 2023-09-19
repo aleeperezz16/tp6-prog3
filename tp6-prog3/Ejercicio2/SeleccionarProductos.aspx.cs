@@ -15,15 +15,15 @@ namespace tp6_prog3.Ejercicio2
         {
             if (!IsPostBack)
             {
-                grdProductos.DataSource = _conexion.ObtenerTablas("SELECT IdProducto,NombreProducto,IdProveedor,PrecioUnidad FROM Productos", "Productos");
-                grdProductos.DataBind();
+
+                cargarProductosEnGrilla();
             }   
         }
 
         protected void grdProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grdProductos.PageIndex = e.NewPageIndex;
-            grdProductos.DataBind();
+            cargarProductosEnGrilla();
         }
 
         protected void grdProductos_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
@@ -44,7 +44,7 @@ namespace tp6_prog3.Ejercicio2
         public DataTable crearTabla()
         {
             DataTable dt = new DataTable();
-            DataColumn columna = new DataColumn("IdProducto", System.Type.GetType("System.String"));
+            DataColumn columna = new DataColumn("Id Producto", System.Type.GetType("System.String"));
             dt.Columns.Add(columna);
 
             columna = new DataColumn("NombreProducto", System.Type.GetType("System.String"));
@@ -66,6 +66,12 @@ namespace tp6_prog3.Ejercicio2
             dr["IdProveedor"] = idProveedor;
             dr["PrecioUnidad"] = pu;
             tabla.Rows.Add(dr);
+        }
+
+        private void cargarProductosEnGrilla()
+        {
+            grdProductos.DataSource = _conexion.ObtenerTablas("SELECT IdProducto,NombreProducto,IdProveedor,PrecioUnidad FROM Productos", "Productos");
+            grdProductos.DataBind();
         }
 
     }

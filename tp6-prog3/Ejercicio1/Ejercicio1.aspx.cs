@@ -21,7 +21,7 @@ namespace tp6_prog3.Ejercicio1
         protected void gdvProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             gdvProductos.PageIndex = e.NewPageIndex;
-            gdvProductos.DataBind();
+            cargarProductosEnGrilla();
         }
 
         protected void gdvProductos_RowDeleting(object sender, GridViewDeleteEventArgs e)
