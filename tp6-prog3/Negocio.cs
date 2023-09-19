@@ -33,7 +33,7 @@ namespace tp6_prog3
             string consultaSQL = "UPDATE Productos ";
             consultaSQL += "SET NombreProducto = '" + NombreProducto + "',";
             consultaSQL += "CantidadPorUnidad = '" + CantidadPorUnidad + "',";
-            consultaSQL += "PrecioUnidad = " + PrecioUnidad + " ";
+            consultaSQL += "PrecioUnidad = '" + PrecioUnidad +  "' ";
             consultaSQL += "WHERE IdProducto = " + IdProducto.Trim();
             return _conexion.EjecutarConsulta(consultaSQL);
         }

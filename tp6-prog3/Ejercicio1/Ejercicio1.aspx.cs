@@ -12,7 +12,10 @@ namespace tp6_prog3.Ejercicio1
         Negocio negocio = new Negocio();
         protected void Page_Load(object sender, EventArgs e)
         {
-            cargarProductosEnGrilla();
+            if (!IsPostBack)
+            {
+                cargarProductosEnGrilla();
+            }
         }
 
         protected void gdvProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
@@ -45,7 +48,7 @@ namespace tp6_prog3.Ejercicio1
         protected void gdvProductos_RowEditing(object sender, GridViewEditEventArgs e)
         {
             gdvProductos.EditIndex = e.NewEditIndex;
-            gdvProductos.DataBind();
+            cargarProductosEnGrilla();
         }
 
         protected void gdvProductos_RowCancelingEdit(object sender, GridViewCancelEditEventArgs e)
@@ -56,6 +59,7 @@ namespace tp6_prog3.Ejercicio1
 
         private void cargarProductosEnGrilla()
         {
+           
             gdvProductos.DataSource = negocio.ObtenerProductos();
             gdvProductos.DataBind();
 
