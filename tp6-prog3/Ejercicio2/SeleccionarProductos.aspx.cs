@@ -22,7 +22,7 @@ namespace tp6_prog3.Ejercicio2
         protected void grdProductos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
             grdProductos.PageIndex = e.NewPageIndex;
-            cargarProductosEnGrilla();
+            grdProductos.DataBind();
         }
 
         protected void grdProductos_SelectedIndexChanging(object sender, GridViewSelectEventArgs e)
