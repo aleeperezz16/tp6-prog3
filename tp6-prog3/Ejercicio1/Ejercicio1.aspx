@@ -34,6 +34,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_Producto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:TextBox>
                             &nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="rfvNombreProducto" runat="server" ControlToValidate="txt_eit_Producto">*</asp:RequiredFieldValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_NombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:Label>
@@ -43,6 +44,7 @@
                         <EditItemTemplate>
                             <asp:TextBox ID="txt_eit_Cantidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:TextBox>
                             &nbsp;
+                            <asp:RequiredFieldValidator ID="rfvCantidadUnidad" runat="server" ControlToValidate="txt_eit_Cantidad"></asp:RequiredFieldValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_CantPorUnidad" runat="server" Text='<%# Bind("CantidadPorUnidad") %>'></asp:Label>
@@ -53,6 +55,7 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             <asp:TextBox ID="txt_eit_PrecioUnidad" runat="server" Text='<%# Bind("PrecioUnidad") %>' Width="270px"></asp:TextBox>
                             &nbsp;&nbsp;&nbsp;
+                            <asp:RequiredFieldValidator ID="rfvPrecioUnidad" runat="server" ControlToValidate="txt_eit_PrecioUnidad">*</asp:RequiredFieldValidator>
                         </EditItemTemplate>
                         <ItemTemplate>
                             <asp:Label ID="lbl_it_PrecioUnidad" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:Label>

@@ -15,7 +15,7 @@ namespace tp6_prog3
         {  ///RUTA DAVID
            ///string ruta = "Data Source = DESKTOP - CIET1TI\\SQLEXPRESS01; Initial Catalog ="+ baseDeDatos +"; Integrated Security = True";
            string ruta = "Data Source = localhost\\sqlexpress; Initial Catalog = " + baseDeDatos + "; Integrated Security = True";
-            _conexion = new SqlConnection(ruta);
+           _conexion = new SqlConnection(ruta);
         }
 
         public DataTable ObtenerTablas(string consultaSQL, string nombreTabla)
@@ -42,20 +42,16 @@ namespace tp6_prog3
         }
         private void ParametrosProducto(ref SqlCommand comando, Producto producto)
         {
-            SqlParameter Parametros = new SqlParameter();
-            Parametros = comando.Parameters.Add("@IdProducto", SqlDbType.Int);
-            Parametros.Value = producto.IdProducto;
-            Parametros = comando.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 40);
-            Parametros.Value = producto.NombreProducto;
-            Parametros = comando.Parameters.Add("@CantidadPorUnidad", SqlDbType.NVarChar, 20);
-            Parametros.Value = producto.CantidadPorUnidad;
-            Parametros = comando.Parameters.Add("@PrecioUnidad", SqlDbType.Decimal);
-            Parametros.Value = producto.PrecioUnidad;
+            (comando.Parameters.Add("@IdProducto", SqlDbType.Int)).Value = producto.IdProducto;
+            (comando.Parameters.Add("@NombreProducto", SqlDbType.NVarChar, 40)).Value = producto.NombreProducto;
+            (comando.Parameters.Add("@CantidadPorUnidad", SqlDbType.NVarChar, 20)).Value = producto.CantidadPorUnidad;
+            (comando.Parameters.Add("@PrecioUnidad", SqlDbType.Money)).Value = producto.PrecioUnidad;
         }
         public bool ActualizarProducto(Producto prod)
         {
             _conexion.Open();
-            string consulta = " UPDATE Productos SET NombreProducto = @NombreProducto, CantidadPorUnidad = @CantidadPorUnidad, PrecioUnidad = @PrecioUnidad WHERE IdProducto = @IdProducto";
+
+            string consulta = "UPDATE Productos SET NombreProducto = @NombreProducto, CantidadPorUnidad = @CantidadPorUnidad, PrecioUnidad = @PrecioUnidad WHERE IdProducto = @IdProducto";
             SqlCommand Comando = new SqlCommand(consulta, _conexion);
             ParametrosProducto(ref Comando, prod);
 
@@ -67,7 +63,6 @@ namespace tp6_prog3
                 return true;
             else
                 return false;
-
         }
 
     }

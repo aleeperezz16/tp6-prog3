@@ -26,7 +26,7 @@
             <br />
             <br />
             <br />
-            <asp:HyperLink ID="hlEjercicio2" runat="server" NavigateUrl="~/Ejercicio2/Inicio.aspx">Ejercicio 2</asp:HyperLink>
+            <asp:HyperLink ID="hlEjercicio2" runat="server" NavigateUrl="~/Ejercicio2/Ejercicio2.aspx">Ejercicio 2</asp:HyperLink>
         </div>
     </form>
 </body>
