@@ -33,13 +33,13 @@ namespace tp6_prog3.Ejercicio2
         protected global::System.Web.UI.WebControls.HyperLink hlSeleccionarProductos;
 
         /// <summary>
-        /// Control lbEliminarPD.
+        /// Control lbtnEliminarProductos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lbEliminarPD;
+        protected global::System.Web.UI.WebControls.LinkButton lbtnEliminarProductos;
 
         /// <summary>
         /// Control hlMostrarProductos.

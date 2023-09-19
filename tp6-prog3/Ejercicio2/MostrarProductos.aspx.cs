@@ -12,6 +12,14 @@ namespace tp6_prog3.Ejercicio2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
+                if (Session["Productos"] != null)
+                {
+                    grdProductos.DataSource = (DataTable)Session["Productos"];
+                    grdProductos.DataBind();
+                }
+            }
         }
     }
 }

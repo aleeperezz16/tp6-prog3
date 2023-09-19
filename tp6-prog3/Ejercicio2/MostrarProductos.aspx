@@ -15,8 +15,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <b>Productos Seleccionados por el Usuario:</b><br />
-            <asp:GridView ID="grvProductos" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
+            <b>
+            <br />
+            <br />
+            Productos Seleccionados por el Usuario:<br />
+            </b><br />
+            <asp:GridView ID="grdProductos" runat="server" BackColor="White" BorderColor="#3366CC" BorderStyle="None" BorderWidth="1px" CellPadding="4">
                 <FooterStyle BackColor="#99CCCC" ForeColor="#003399" />
                 <HeaderStyle BackColor="#003399" Font-Bold="True" ForeColor="#CCCCFF" />
                 <PagerStyle BackColor="#99CCCC" ForeColor="#003399" HorizontalAlign="Left" />

@@ -62,7 +62,7 @@
                     <td class="auto-style4">&nbsp;</td>
                     <td class="auto-style3">&nbsp;</td>
                     <td>
-                        <asp:LinkButton ID="lbEliminarPD" runat="server">Eliminar Productos seleccionados</asp:LinkButton>
+                        <asp:LinkButton ID="lbtnEliminarProductos" runat="server">Eliminar Productos seleccionados</asp:LinkButton>
                     </td>
                 </tr>
                 <tr>

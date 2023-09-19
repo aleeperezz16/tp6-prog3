@@ -14,22 +14,22 @@
                 <Columns>
                     <asp:TemplateField HeaderText="Id Producto">
                         <ItemTemplate>
-                            <asp:Label ID="itLblIdProducto" runat="server" Text='<%# Bind("IdProducto") %>'></asp:Label>
+                            <asp:Label ID="lblIdProducto" runat="server" Text='<%# Bind("IdProducto") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Nombre Producto">
                         <ItemTemplate>
-                            <asp:Label ID="itLblNombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:Label>
+                            <asp:Label ID="lblNombreProducto" runat="server" Text='<%# Bind("NombreProducto") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Id Proveedor">
                         <ItemTemplate>
-                            <asp:Label ID="itLblIdProveedor" runat="server" Text='<%# Bind("IdProveedor") %>'></asp:Label>
+                            <asp:Label ID="lblIdProveedor" runat="server" Text='<%# Bind("IdProveedor") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:TemplateField HeaderText="Precio Unitario">
                         <ItemTemplate>
-                            <asp:Label ID="itLblPrecioUnitario" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:Label>
+                            <asp:Label ID="lblPrecioUnitario" runat="server" Text='<%# Bind("PrecioUnidad") %>'></asp:Label>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
