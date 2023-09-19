@@ -67,21 +67,24 @@ namespace tp6_prog3.Ejercicio1
 
         protected void gdvProductos_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            string IdProducto = ((Label)gdvProductos.Rows[e.RowIndex].FindControl("lbl_eit_IdProducto")).Text;
-            string NombreProducto = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_Producto")).Text;
-            string CantidadUnidad = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_Cantidad")).Text;
-            string PrecioUnidad = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_PrecioUnidad")).Text;
+            string s_IdProducto = ((Label)gdvProductos.Rows[e.RowIndex].FindControl("lbl_eit_idProducto")).Text;
+            string s_NombreProducto = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_Producto")).Text;
+            string s_CantidadPorUnidad = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_Cantidad")).Text;
+            string s_PrecioUnidad = ((TextBox)gdvProductos.Rows[e.RowIndex].FindControl("txt_eit_PrecioUnidad")).Text;
 
-            int modifico = negocio.ActualizarProducto(IdProducto,NombreProducto,CantidadUnidad,PrecioUnidad);
+            Producto prod = new Producto();
+            prod.IdProducto = Convert.ToInt32(s_IdProducto);
+            prod.NombreProducto = s_NombreProducto;
+            prod.CantidadPorUnidad = s_CantidadPorUnidad;
+            prod.PrecioUnidad = Convert.ToDecimal(s_PrecioUnidad);
 
-            if (modifico == 1)
+            AccesoDatos acceso = new AccesoDatos("Neptuno");
+            bool filasAfectadas = acceso.ActualizarProducto(prod);
+            if (filasAfectadas)
             {
-                ///SE MODIFICO CORRECTAMENTE
+                //se actualizó
+            }
 
-            }
-            {
-                ///NO SE MODIFICO
-            }
             gdvProductos.EditIndex = -1;
             cargarProductosEnGrilla();
         }
