@@ -44,7 +44,7 @@ namespace tp6_prog3.Ejercicio2
         public DataTable crearTabla()
         {
             DataTable dt = new DataTable();
-            DataColumn columna = new DataColumn("Id Producto", System.Type.GetType("System.String"));
+            DataColumn columna = new DataColumn("IdProducto", System.Type.GetType("System.String"));
             dt.Columns.Add(columna);
 
             columna = new DataColumn("NombreProducto", System.Type.GetType("System.String"));
