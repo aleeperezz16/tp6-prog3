@@ -13,5 +13,10 @@ namespace tp6_prog3.Ejercicio2
         {
 
         }
+
+        protected void lbtnEliminarProductos_Click(object sender, EventArgs e)
+        {
+            Session["Productos"] = null;
+        }
     }
 }
